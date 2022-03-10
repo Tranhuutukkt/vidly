@@ -5,24 +5,30 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll --verbose --coverage",
-    "start": "nodemon",
+    "start": "node index.js",
     "env_test": "cross-env $NODE_ENV=test node index.js"
+  },
+  "engines": {
+    "node": "16.13.1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
     "config": "^3.3.6",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
     "fawn": "^2.1.5",
+    "helmet": "^5.0.2",
     "joi": "^17.4.2",
     "joi-objectid": "^4.0.2",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "mongoose": "^5.2.9",
+    "nodemon": "^2.0.15",
     "winston": "^3.3.3",
     "winston-mongodb": "^5.0.7"
   },
