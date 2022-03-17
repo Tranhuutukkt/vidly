@@ -8,7 +8,6 @@
     "start": "node index.js"
   },
   "engines": {
-    "mongoose": "^5.2.9",
     "node": "16.13.1"
   },
   "keywords": [],
@@ -27,6 +26,7 @@
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
+    "mongoose": "^5.2.9",
     "nodemon": "^2.0.15",
     "winston": "^3.3.3",
     "winston-mongodb": "^5.0.7"
