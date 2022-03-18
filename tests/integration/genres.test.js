@@ -11,7 +11,7 @@ describe('/api/genres', ()=>{
     });
     afterEach(async function () {
         await Genre.remove({});
-        //await server.close();
+        await server.close();
     });
 
     describe('GET /', function () {
