@@ -53,7 +53,7 @@ describe('/api/returns', function () {
     });
 
     afterEach(async function () {
-        await server.close();
+        //await server.close();
         await Rental.remove({});
         await Movie.remove({});
     });

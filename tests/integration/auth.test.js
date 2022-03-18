@@ -10,7 +10,7 @@ describe('auth middleware', function () {
     });
     afterEach(async function () {
         await Genre.remove({});
-        await server.close();
+        //await server.close();
     });
 
     let token;
