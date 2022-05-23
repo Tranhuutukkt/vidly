@@ -2,8 +2,6 @@ const express = require('express');
 const _ = require('lodash');
 const {User, validate} = require('../models/user');
 const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const config = require("config");
 const auth = require("../middleware/auth");
 const router = express.Router();
 
@@ -26,7 +24,10 @@ router.post('/', async (req, res) => {
     await user.save();
 
     const token = user.generateAuthToken();
-    res.header('x-auth-token', token).send(_.pick(user, ['_id', 'name', 'email']));
+    res
+        .header('x-auth-token', token)
+        .header("access-control-expose-headers", "x-auth-token")
+        .send(_.pick(user, ['_id', 'name', 'email']));
 });
 
 module.exports = router;
